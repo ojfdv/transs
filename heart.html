@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>跳动的心</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			background-color: pink;
+		}
+		.heart{
+			width: 600px;
+			height: 600px;
+			margin: 0 auto;
+			position: relative;
+		}
+		.box{
+			position: absolute;
+			z-index: 11;
+			background:linear-gradient(-90deg,#f50a45 0%,#d5093c 40%);
+            animation: beat 0.7s ease infinite;
+		}
+		.box:nth-child(1){
+			z-index: 33;
+		}
+		.box:nth-child(2){
+            width: 210px;
+            height: 210px;
+            bottom: 210px;
+            left: 193px;
+			background: linear-gradient(-45deg,#b80734 0%,#d5093c 40%);
+		}
+		.side {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            top:100px;
+        }
+        .left {
+            left: 120px;
+        }
+        .right {
+            right: 124px;
+        }
+        .left:after{
+            content: "王一博";
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            display: inline-block;
+            position: absolute;
+            top: 95px;
+            left: 95px;
+            transform: rotate(135deg);
+        }
+        .right:after{
+            content: "王一博";
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            display: inline-block;
+            position: absolute;
+            top: 130px;
+            left: 60px;
+            transform: rotate(135deg);
+        }
+		@keyframes beat {
+            0% {
+                transform: scale(1) rotate(225deg);
+                box-shadow: 0 0 40px #d5093c;
+            }   
+ 
+            50% {
+                transform: scale(1.1) rotate(225deg);
+                box-shadow: 0 0 40px #d5093c;
+            }
+ 
+            100% {
+                transform: scale(1) rotate(225deg);
+                box-shadow: 0 0 40px #d5093c;
+            }
+        }
+	</style>
+</head>
+<body>
+	<div class="heart">
+		<div class="box left side">
+		</div>
+		<div class="box"></div>
+		<div class="box right side">
+		</div>
+	</div>
+</body>
+</html>
